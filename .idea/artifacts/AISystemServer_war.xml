@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AISystemServer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="AISystemServer.war">
+      <element id="artifact" artifact-name="AISystemServer:war exploded" />
+    </root>
+  </artifact>
+</component>
