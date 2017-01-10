@@ -1,10 +1,13 @@
 package com.swpu;
 
 
+import com.swpu.service.InformationService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.stereotype.Controller;
 
+import javax.annotation.Resource;
 
 
 /**
@@ -12,8 +15,11 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @SpringBootApplication
+@ServletComponentScan
 public class Springboot {
-    public static void main(String[] args)  {
+    @Resource
+    protected InformationService informationService;
+    public static void main(String[] args) {
         SpringApplication.run(Springboot.class, args);
     }
 }

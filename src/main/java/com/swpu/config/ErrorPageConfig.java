@@ -13,8 +13,7 @@ import org.springframework.http.HttpStatus;
 
 @Configuration
 public class ErrorPageConfig {
-
-    @Bean 
+    @Bean
     public EmbeddedServletContainerCustomizer embeddedServletContainerCustomizer() {
         return new MyCustomizer();
     }

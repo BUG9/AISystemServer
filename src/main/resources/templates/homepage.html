@@ -1,0 +1,67 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta name="Robots" content="all"/>
+    <meta name="Author" content="智慧农业商城"/>
+    <meta name="Copyright" content="智慧农业商城版权所有"/>
+    <meta name="Keywords" content="智慧农业，智能生活，智能"/>
+    <meta name="Description" content="智慧农业就是将物联网技术运用到传统农业中去，实现监控、监测、数据传输、图像采集等功能"/>
+    <title>智慧农业</title>
+    <link href="../static/reouses/css/homepage.css" th:href="@{/reouses/css/homepage.css}" type="text/css" rel="stylesheet"/>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+<div class="mask">
+   <div class="mask-box">
+       <img  class="close" onclick="close_mask()" src="../static/reouses/close_goods.png" th:src="@{/reouses/close_goods.png}"/><br/>
+        <div id="err">
+         <span></span>
+        </div>
+   </div>
+</div>
+<div id="main">
+ <div class="header">智慧农业控制系统</div>
+ <div class="col-12">
+ <div class="col-4">
+     <label class="change"  for="file-up">
+         <span class="text">✐ 点击更改图片 </span>
+         <img class="img" src="../static/reouses/img.jpg" th:src="@{/reouses/img.jpg}"/><br/>
+         <img class="img" src="../static/reouses/one.jpg" th:src="@{/reouses/one.jpg}"/><br/>
+         <img class="img" src="../static/reouses/tow.jpg" th:src="@{/reouses/tow.jpg}"/><br/>
+         <img class="img" src="../static/reouses/three.jpg" th:src="@{/reouses/three.jpg}"/><br/>
+         <img  class="img" src="../static/reouses/five.jpg" th:src="@{/reouses/five.jpg}"/><br/>
+         <img class="img" src="../static/reouses/five (2).jpg" th:src="@{/reouses/five (2).jpg}"/>
+     </label>
+     <input type="file" name="img" form="form1" id="file-up" style="display: none;"/>
+</div>
+    <div class="col-8"  ng-app="myApp" ng-controller="myCtrl">
+        <div class="information"  >
+             <form action="" method="get" id="form1" enctype="multipart/form-data">
+                  <fieldset>
+                    <legend>大棚植物生长参数</legend>
+                      <div>
+                         土壤温度<input type="text" id="a1"  name="soiltemp" class="text" ng-model="Inf.soilTemperature" />℃<br/>
+                 土壤湿度<input type="text" id="a2" name="soilmoi" class="text" ng-model="Inf.soilHumidity"/>%RH<br/>
+                         空气温度<input type="text" id="a3" name="airtemp" class="text" ng-model="Inf.greenhouseTemperature"/>℃<br/>
+                 空气湿度<input type="text" id="a4" name="airmoi" class="text" ng-model="Inf.greenhouseHumidity"/>%RH<br/>
+                          光照强度<input type="text" id="a5" name="lightinten" class="text" ng-model="Inf.lightIntensity"/>Lx
+                      </div>
+                   </fieldset>
+             </form>
+        </div>
+        <div class="btn">
+            <p onclick="fengsan() "><img src="../static/reouses/icon2.png" th:src="@{/reouses/icon2.png}"/><label class="btn-text">通风</label></p>
+           <p onclick="diandeng()"><img src="../static/reouses/icon3.png" th:src="@{/reouses/icon3.png}"/><label class="btn-text">灯光</label></p>
+            <p onclick="shuibeng()"><img src="../static/reouses/icon1.png" th:src="@{/reouses/icon1.png}"/><label class="btn-text">水泵</label></p>
+        </div>
+ </div>
+</div>
+</div>
+</body>
+<script src="../static/reouses/js/homepage.js" th:src="@{/reouses/js/homepage.js}"></script>
+</html>

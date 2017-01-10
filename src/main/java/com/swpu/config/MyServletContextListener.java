@@ -1,5 +1,9 @@
 package com.swpu.config;
 
+
+import com.swpu.socket.impl.NodeSocketThread;
+
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -11,7 +15,7 @@ import javax.servlet.annotation.WebListener;
 public class MyServletContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-
+        new NodeSocketThread().start();
     }
 
     @Override
